@@ -15,7 +15,7 @@ and the Flutter guide for
 
 This package lets you make animated gradient texts without any hassle. 
 Just pass the ```text```, ```colors```, the ```duration``` of the animation and you're done!
-You can do amazing effects using the ```transform```, and ```reverse```.
+Using the ```transform``` and ```reverse```, you can achieve amazing effects.
 For More info read the docs below.
 
 ## Getting started
@@ -47,7 +47,7 @@ GradientAnimationText(
         ),
     ),
     colors: [
-        Color(0xff8f00ff),
+        Color(0xff8f00ff),  // violet
         Colors.indigo,
         Colors.blue,
         Colors.green,
@@ -73,7 +73,7 @@ GradientAnimationText(
         ),
     ),
     colors: [
-        Color(0xff8f00ff),
+        Color(0xff8f00ff),  // violet
         Colors.indigo,
         Colors.blue,
         Colors.green,
@@ -163,8 +163,8 @@ GradientAnimationText(
 ## Author
 This package is developed by Sahil Shah.
 
-- [GitHub][]
-- [LinkedIn][]
+- [GitHub][github]
+- [LinkedIn][linkedin]
 
 [gradient-transform]: https://api.flutter.dev/flutter/painting/GradientTransform-class.html
 [sweep-gradient]: https://api.flutter.dev/flutter/painting/SweepGradient-class.html
