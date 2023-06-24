@@ -3,19 +3,15 @@ library flutter_gradient_animation_text;
 import 'package:flutter/material.dart';
 
 class GradientAnimationText extends StatefulWidget {
-  final String text;
+  final Text text;
   final List<Color> colors;
   final Duration duration;
-  final double? fontSize;
-  final FontWeight? fontWeight;
   final bool? reverse;
   final GradientTransform? transform;
   const GradientAnimationText({
     required this.text,
     required this.colors,
     required this.duration,
-    required this.fontSize,
-    this.fontWeight,
     this.reverse,
     this.transform,
     super.key,
@@ -31,16 +27,18 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
   late List<Color> colors;
   late int n;
   late double diff;
+  late Text text;
 
   @override
   void initState() {
     super.initState();
+    text = widget.text;
     // animation controller
     _animationController = AnimationController(
       vsync: this,
       duration: widget.duration,
     );
-    _animationController.repeat(reverse: widget.reverse ?? true);
+    _animationController.repeat(reverse: widget.reverse ?? false);
 
     // animation
     _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)
@@ -49,6 +47,7 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
       });
 
     // colors
+    colors = [];
     colors.add(widget.colors.last);
     colors.addAll(widget.colors);
     colors.addAll(widget.colors);
@@ -82,19 +81,28 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
   Widget build(BuildContext context) {
     return ShaderMask(
       child: Text(
-        widget.text,
-        style: TextStyle(
-          fontSize: widget.fontSize,
-          fontWeight: (widget.fontWeight) ?? FontWeight.normal,
-          color: Colors.white,
-        ),
+        text.data!,
+        key: text.key,
+        locale: text.locale,
+        maxLines: text.maxLines,
+        overflow: text.overflow,
+        textAlign: text.textAlign,
+        selectionColor: text.selectionColor,
+        semanticsLabel: text.semanticsLabel,
+        softWrap: text.softWrap,
+        strutStyle: text.strutStyle,
+        style: (text.style != null) ? text.style!.copyWith(color: Colors.white) : const TextStyle(color: Colors.white),
+        textDirection: text.textDirection,
+        textHeightBehavior: text.textHeightBehavior,
+        textScaleFactor: text.textScaleFactor,
+        textWidthBasis: text.textWidthBasis,
       ),
       shaderCallback: (rect) {
         return LinearGradient(
           tileMode: TileMode.clamp,
           transform: widget.transform,
           stops: stopsList(),
-          colors: widget.colors,
+          colors: colors,
         ).createShader(rect);
       },
     );

@@ -1,5 +1,5 @@
 name: flutter_gradient_animation_text
-description: GradientAnimationText helps to create a linear gradient animation over the text very easily. It takes the text string, a list of colors, and the duration of the animation as the arguments. The linear gradient can be transformed, the animation can be reversed, and the font size and weight can be set as desired as well.
+description: Create an animated gradient text very easily.
 version: 1.0.0
 homepage:
 

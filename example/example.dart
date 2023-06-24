@@ -41,8 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             // Rainbow Text Without Reverse
             GradientAnimationText(
-              text: 'Rainbow Text 1',
-              fontSize: 50,
+              text: Text(
+                'Rainbow Text 1',
+                style: TextStyle(
+                  fontSize: 50,
+                ),
+              ),
               colors: [
                 Color(0xff8f00ff),
                 Colors.indigo,
@@ -56,8 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             // Rainbow Text With Reverse
             GradientAnimationText(
-              text: 'Rainbow Text 2',
-              fontSize: 50,
+              text: Text(
+                'Rainbow Text 1',
+                style: TextStyle(
+                  fontSize: 50,
+                ),
+              ),
               colors: [
                 Color(0xff8f00ff),
                 Colors.indigo,
@@ -72,20 +80,29 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             // Gold Text 1
             GradientAnimationText(
-              text: 'Gold Text 1',
-              fontSize: 50,
+              text: Text(
+                'Gold Text 1',
+                style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               colors: [
                 Colors.amber,
                 Colors.white,
               ],
               duration: Duration(seconds: 5),
               reverse: true,
-              fontWeight: FontWeight.bold,
             ),
             // Gold Text 2
             GradientAnimationText(
-              text: 'Gold Text 2',
-              fontSize: 50,
+              text: Text(
+                'Gold Text 2',
+                style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               colors: [
                 Colors.amber,
                 Colors.amber,
@@ -94,19 +111,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
               duration: Duration(seconds: 5),
               reverse: true,
-              fontWeight: FontWeight.bold,
             ),
             // Tranform Text
             GradientAnimationText(
-              text: 'Tranform Text',
-              fontSize: 50,
+              text: Text(
+                'Tranform Text',
+                style: TextStyle(
+                  fontSize: 90,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               colors: [
-                Color(0xff4e65ff),
+                Color(0xFF061A9C),
                 Color(0xff92effd),
               ],
               duration: Duration(seconds: 5),
               transform: GradientRotation(math.pi / 4),
-              fontWeight: FontWeight.bold,
             ),
           ],
         ),
