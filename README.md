@@ -33,7 +33,7 @@ And you are good to go!
 ## Usage
 
 Create your animated gradient text.
-The only 3 required arguments are:
+The 3 required arguments are:
 1. ```text```(Text): The text.
 2. ```colors```(List\<Colors>): List of colors you want in your gradient.
 3. ```duration```(Duration): Duration for which a single gradient animation runs.
