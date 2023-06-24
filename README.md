@@ -10,7 +10,7 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
-![Static Badge](https://img.shields.io/badge/flutter__gradient__animation__text-v1.0.0-8a2b) ![Static Badge](https://img.shields.io/badge/nullsafety-3.0.0-00b7eb) ![Static Badge](https://img.shields.io/badge/platform-flutter-ff69b4.svg) 
+![Static Badge](https://img.shields.io/badge/flutter__gradient__animation__text-v1.0.3-8a2b) ![Static Badge](https://img.shields.io/badge/nullsafety-3.0.0-00b7eb) ![Static Badge](https://img.shields.io/badge/platform-flutter-ff69b4.svg) ![Static Badge](https://img.shields.io/badge/license-MIT-purple)
 
 
 This package lets you make animated gradient texts without any hassle. 

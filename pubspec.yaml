@@ -1,6 +1,6 @@
 name: flutter_gradient_animation_text
-description: Create an animated gradient text very easily.
-version: 1.0.1
+description: Create an animated gradient text very easily by taking text, colors, and duration of animation as inputs.
+version: 1.0.2
 homepage: https://github.com/SahilDShaw/flutter-gradient-animation-text
 
 environment:

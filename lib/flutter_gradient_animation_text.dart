@@ -3,11 +3,14 @@ library flutter_gradient_animation_text;
 import 'package:flutter/material.dart';
 
 class GradientAnimationText extends StatefulWidget {
+  // data members
   final Text text;
   final List<Color> colors;
   final Duration duration;
   final bool? reverse;
   final GradientTransform? transform;
+
+  // constructor
   const GradientAnimationText({
     required this.text,
     required this.colors,
@@ -22,6 +25,7 @@ class GradientAnimationText extends StatefulWidget {
 }
 
 class _GradientAnimationTextState extends State<GradientAnimationText> with SingleTickerProviderStateMixin {
+  // data members
   late AnimationController _animationController;
   late Animation _animation;
   late List<Color> colors;
@@ -38,6 +42,8 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
       vsync: this,
       duration: widget.duration,
     );
+
+    // repeating animation
     _animationController.repeat(reverse: widget.reverse ?? false);
 
     // animation
@@ -59,10 +65,12 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
     diff = (1 / n);
   }
 
+  // creates stops dynamically based on the animation value
   List<double> stopsList() {
     int multiplier = -1 * n;
     List<double> stops = [];
 
+    // generates (2*n + 1) stops
     while (multiplier <= n) {
       stops.add(_animation.value + (multiplier * diff));
       multiplier++;
@@ -73,6 +81,7 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
 
   @override
   void dispose() {
+    // disposing animationController
     _animationController.dispose();
     super.dispose();
   }
@@ -80,6 +89,7 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
+      // copying the text with color as Colors.white
       child: Text(
         text.data!,
         key: text.key,
@@ -98,6 +108,7 @@ class _GradientAnimationTextState extends State<GradientAnimationText> with Sing
         textWidthBasis: text.textWidthBasis,
       ),
       shaderCallback: (rect) {
+        // gradient
         return LinearGradient(
           tileMode: TileMode.clamp,
           transform: widget.transform,

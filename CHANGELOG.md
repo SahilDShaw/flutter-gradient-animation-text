@@ -4,3 +4,6 @@
 
 ## 1.0.1
 * Unnecessary dependencies removed.
+
+## 1.0.2
+* Documentation updated.
