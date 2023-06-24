@@ -120,6 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 90,
                   fontWeight: FontWeight.bold,
                 ),
+                textAlign: TextAlign.center,
               ),
               colors: [
                 Color(0xFF061A9C),
