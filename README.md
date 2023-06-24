@@ -58,7 +58,7 @@ GradientAnimationText(
     duration: Duration(seconds: 5),
 ),
 ```
-![Rainbow Text 1](/images/rainbow-text-1.gif "Rainbow Text 1")
+![Rainbow Text 1][rainbow-text-1]
 
 Reverse the animation.
 This plays the animation backwards when a single iteration of the forward animation is completed.
@@ -85,12 +85,12 @@ GradientAnimationText(
     reverse: true,  // reverse
 ),
 ```
-![Rainbow Text 2](/images/rainbow-text-2.gif "Rainbow Text 2")
+![Rainbow Text 2][rainbow-text-2]
 
 Play with colors.
-You can use a color multiple times to increase the area covered by that color.
+It is possible to use the same color more than once to increase the area it covers.
 Gold Text Example:
-These 2 Gold Text animations have different number of ```Colors.amber``` color.
+The following 2 Gold Text animations have different number of ```Colors.amber``` color.
 ```dart
 // gold text 1
 GradientAnimationText(
@@ -127,7 +127,7 @@ GradientAnimationText(
     reverse: true,
 ),
 ```
-![Gold Text](/images/gold-text.gif "Gold Text")
+![Gold Text][gold-text]
 
 Transform your gradient.
 You can transform your gradient using ```transform``` property.
@@ -150,7 +150,7 @@ GradientAnimationText(
     transform: GradientRotation(math.pi / 4),   // tranform
 ),
 ```
-![Tranform Text](/images/transform-text.gif "Tranform Text")
+![Tranform Text][transform-text]
 
 ## Available Properties
 | Property        	| Type               	| Description                                          	|
@@ -166,8 +166,20 @@ This package is developed by Sahil Shah.
 - [GitHub][github]
 - [LinkedIn][linkedin]
 
+[rainbow-text-1]: https://github.com/SahilDShaw/flutter-gradient-animation-text/raw/2ebd0eed8db6f220ce2eb628caca880f0594a201/images/rainbow-text-1.gif
+
+[rainbow-text-2]: https://github.com/SahilDShaw/flutter-gradient-animation-text/raw/2ebd0eed8db6f220ce2eb628caca880f0594a201/images/rainbow-text-2.gif
+
+[gold-text]: https://github.com/SahilDShaw/flutter-gradient-animation-text/raw/2ebd0eed8db6f220ce2eb628caca880f0594a201/images/gold-text.gif
+
+[transform-text]: https://github.com/SahilDShaw/flutter-gradient-animation-text/raw/2ebd0eed8db6f220ce2eb628caca880f0594a201/images/transform-text.gif
+
 [gradient-transform]: https://api.flutter.dev/flutter/painting/GradientTransform-class.html
+
 [sweep-gradient]: https://api.flutter.dev/flutter/painting/SweepGradient-class.html
+
 [gradient-rotation]: https://api.flutter.dev/flutter/painting/GradientRotation-class.html
+
 [github]: https://github.com/SahilDShaw
+
 [linkedin]: https://www.linkedin.com/in/sahil-shah-pro/
